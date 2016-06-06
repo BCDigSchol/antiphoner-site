@@ -1,0 +1,18 @@
+// Fonts
+$body-font: 'Open Sans', sans-serif;
+$header-font: $body-font;
+$accent-font: $body-font;
+
+$base-font-size: 20px;
+
+$normal-weight: 300;
+$semi-bold-weight: 400;
+$bold-weight: 700;
+
+// Animation timings
+$nav-panel-fade-duration: 0.5s;
+$banner-pre-fade-wait: 0.1s;
+$banner-fade-duration: 0.5s;
+
+// Misc.
+$z-index-base: 10000;

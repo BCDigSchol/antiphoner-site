@@ -131,7 +131,8 @@ hr {
 }
 
 blockquote {
-  border-left: solid 0.5em $border-color;
+  display: block;
+  /*border-left: solid 0.5em $border-color;*/
   font-style: italic;
   padding: 1em 0 1em 2em;
 }

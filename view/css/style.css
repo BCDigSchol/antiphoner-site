@@ -1,0 +1,203 @@
+@import url("http://fonts.googleapis.com/css?family=Lato:300,400,900");
+
+@font-face {
+    font-family: 'Volpiano';
+    src: url('../fonts/volpiano.woff') format('woff');
+    src: url('../fonts/volpiano.ttf') format('truetype');
+}
+
+body, html {
+    height: 90vh;
+    width: 100%;
+    font-family: "Lato", serif, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+#viewer-body {
+    display: flex;
+}
+
+#diva-wrapper {
+    height: 90vh;
+    width: 50%;
+}
+
+#info {
+    flex: 1;
+    padding: 0 2em;
+    font-weight: 300;
+    height: 90vh
+}
+
+.diva-outer {
+    height: 100%;
+}
+
+h1, h2 {
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+a {
+    cursor: pointer;
+}
+
+#metadata-tab {
+    display: block;
+}
+
+#metadata-tab h3 {
+    font-weight: normal;
+    padding: .5em;
+    cursor: pointer;
+    text-decoration: none;
+    color: gray;
+    border: 1px solid gray;
+    margin: 0 0 .25em 0;
+}
+
+#metadata-tab .metadata {
+    display: none;
+    padding: .5em;
+}
+
+#metadata-tab dt {
+    font-weight: bold;
+}
+
+li {
+    clear: both;
+}
+
+dl {
+    overflow: hidden;
+    margin: 0 0 1em 0;
+}
+
+dd, dt {
+    margin: 0;
+}
+
+dd {
+    float: left;
+    width: 50%;
+}
+
+dt {
+    float: left;
+    width: 9%;
+    min-width: 3.5em;
+    clear: both;
+    margin-bottom: .5em;
+}
+
+.notation {
+    font-family: 'Volpiano';
+    font-size: 26px;
+}
+
+#volpiano-input {
+    font-size: 30px;
+    size: 600px;
+    font-family: "Volpiano";
+}
+
+#search-tab {
+    display: hidden;
+}
+
+#search-tab h3 {
+    font-weight: normal;
+}
+
+.youtube-viewer {
+    margin: 1em 0;
+}
+
+#metadata-tab {
+    height: 86%;
+    overflow: scroll;
+}
+
+#1-diva-grid-label {
+    display: none;
+}
+
+h3.has-video {
+    background: url(../img/play.svg) no-repeat 98% center;
+    background-size: auto 65%;
+}
+
+#info > section {
+    display: none;
+    padding-top: 1em;
+    overflow: scroll;
+    height: 86%;
+}
+
+#info > section.current-tab {
+    display: block;
+}
+
+#tab-menu ul {
+    list-style: none inside none;
+    margin: 0;
+    padding: 0 0 0 4px;
+}
+
+#tab-menu li.current-tab {
+    border-bottom: 4px solid #f3f4f5;
+    color: #fff;
+}
+
+#tab-menu {
+    clear: both;
+    height: 40px;
+    background-color: #94a4c3;
+    color: #eee;
+}
+
+#metadata-tab {
+    clear: both;
+}
+
+#search-tab {
+    clear: both;
+}
+
+#tab-menu li {
+    float: left;
+    width: 45%;
+    text-align: center;
+    clear: none;
+    list-style: none inside none;
+    padding: .5em;
+    cursor: pointer;
+}
+
+.diva-grid-label, .diva-zoom-label {
+    display: none;
+    margin-left: 1em;
+    line-height: 33px;
+}
+
+.entry-field .search-row {
+    display: none;
+}
+
+.entry-field .search-row.active-field {
+    display: inline-block;
+}
+
+.entry-field label {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}

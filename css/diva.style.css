@@ -19,6 +19,7 @@ body {
 
 #viewer-body {
     display: flex;
+    margin-top: 3em;
 }
 
 #diva-wrapper {

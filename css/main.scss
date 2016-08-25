@@ -12,6 +12,9 @@
 // Load the main scss file
 @import "build";
 
+// Size of touch table screen
+$break-table: 2400px;
+
 // Add any other styles below.
 #banner {
   background-image: url("/img/light-bl.svg"), url("/img/light-br.svg"), url("/img/overlay.png"), url("/img/Antiphoner1a.jpeg");
@@ -23,4 +26,9 @@
 figure img {
   margin: 0 auto;
   display: block;
+}
+
+@media screen and (min-width: $break-table) {
+  #tab-menu {visibility: hidden}
+  #diva-wrapper {width: 65%}
 }

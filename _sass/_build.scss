@@ -137,6 +137,12 @@ blockquote {
   padding: 1em 0 1em 2em;
 }
 
+.normal-weight #blockquote {
+  display:block;
+  font-style:normal;
+  padding: 1em 0 1em 2em;
+}
+
 /* Section/Article */
 
 section, article {
@@ -1124,6 +1130,11 @@ body.index #main {
 
 #navPanel, #navButton {
   display: none;
+}
+
+.navPanel-visible #navPanel {
+  transform: translateX(0px)
+  !important;
 }
 
 @include breakpoint(narrower) {

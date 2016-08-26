@@ -28,7 +28,6 @@ figure img {
   display: block;
 }
 
-<<<<<<< HEAD
 #Table1 table, #Table2 table, #Table3 table, #Table4 table, #Table5 table {
 table-layout: fixed !important;
 }
@@ -37,7 +36,7 @@ table-layout: fixed !important;
 text-align: left;
 padding: 0 5px;
 }
-=======
+
 // Touch table style rules
 @media screen and (min-width: $break-table) {
   #tab-menu {visibility: hidden}
@@ -45,4 +44,3 @@ padding: 0 5px;
   #footer {display: none}
   nav#nav li .button { display: none;}
 }
->>>>>>> origin/master

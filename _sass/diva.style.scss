@@ -267,3 +267,22 @@ span#results-total {
 td.result-notation {
   line-height: 2
 }
+
+.diva-outer {
+    border: none;
+    background-color: $viewer-bg-color;
+    height: 107%;
+}
+
+
+#diva-wrapper {
+    height: 80vh;
+}
+
+#info {
+    height: 93vh;
+}
+
+#viewer-body {
+    background-color: $viewer-bg-color;
+}

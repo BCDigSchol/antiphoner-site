@@ -28,6 +28,16 @@ figure img {
   display: block;
 }
 
+<<<<<<< HEAD
+#Table1 table, #Table2 table, #Table3 table, #Table4 table, #Table5 table {
+table-layout: fixed !important;
+}
+
+#Table1 table td, #Table2 table td, #Table3 table td, #Table4 table td, #Table5 table td {
+text-align: left;
+padding: 0 5px;
+}
+=======
 // Touch table style rules
 @media screen and (min-width: $break-table) {
   #tab-menu {visibility: hidden}
@@ -35,3 +45,4 @@ figure img {
   #footer {display: none}
   nav#nav li .button { display: none;}
 }
+>>>>>>> origin/master

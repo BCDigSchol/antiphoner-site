@@ -116,13 +116,23 @@ dt {
     margin: 1em 0;
 }
 
+
 #metadata-tab {
     height: 86%;
     overflow: scroll;
+    clear: both;
+
+    label {
+        display: none;
+    }
+
+    h3, dd, dt {
+        text-transform: none;
+        font-size: 16px;
+    }
 }
 
 #1-diva-grid-label {
-    display: none;
 }
 
 h3.has-video {
@@ -157,10 +167,6 @@ h3.has-video {
     height: 40px;
     background-color: #94a4c3;
     color: #eee;
-}
-
-#metadata-tab {
-    clear: both;
 }
 
 #search-tab {

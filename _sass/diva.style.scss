@@ -1,179 +1,158 @@
 @font-face {
-    font-family: 'Volpiano';
-    src: url('../fonts/volpiano.woff') format('woff');
-    src: url('../fonts/volpiano.ttf') format('truetype');
-}
-
-body, html {
-    height: 90vh;
-    width: 100%;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
+  font-family: 'Volpiano';
+  src: url('../fonts/volpiano.woff') format('woff');
+  src: url('../fonts/volpiano.ttf') format('truetype');
 }
 
 #viewer-body {
-    display: flex;
-    margin-top: 3em;
-}
+  display: flex;
+  margin-top: 3em;
 
-#diva-wrapper {
+  #diva-wrapper {
     height: 90vh;
     width: 50%;
-}
+  }
 
-#info {
+  #info {
     flex: 1;
     padding: 0 2em;
     font-weight: 300;
     height: 90vh
-}
+  }
 
-.diva-outer {
+  .diva-outer {
     height: 100%;
-}
+  }
 
-h1, h2 {
+  h1, h2 {
     font-weight: 400;
     text-transform: uppercase;
-}
+  }
 
-a {
+  a {
     cursor: pointer;
-}
+  }
 
-#metadata-tab {
-    display: block;
-}
-
-#metadata-tab h3 {
-    font-weight: normal;
-    padding: .5em;
-    cursor: pointer;
-    text-decoration: none;
-    color: gray;
-    border: 1px solid gray;
-    margin: 0 0 .25em 0;
-}
-
-#metadata-tab .metadata {
-    display: none;
-    padding: .5em;
-}
-
-#metadata-tab dt {
-    font-weight: bold;
-}
-
-li {
+  li {
     clear: both;
-}
+  }
 
-dl {
-    overflow: hidden;
-    margin: 0 0 1em 0;
-}
-
-dd, dt {
-    margin: 0;
-}
-
-dd {
-    float: left;
-    width: 50%;
-}
-
-dt {
-    float: left;
-    width: 9%;
-    min-width: 3.5em;
-    clear: both;
-    margin-bottom: .5em;
-}
-
-.notation {
+  .notation {
     font-family: 'Volpiano';
     font-size: 26px;
-}
+  }
 
-#volpiano-input {
+  #volpiano-input {
     font-size: 30px;
     size: 600px;
     font-family: "Volpiano";
-}
+  }
 
-#search-tab {
+  #search-tab {
     display: hidden;
-}
+  }
 
-#search-tab h3 {
+  #search-tab h3 {
     font-weight: normal;
-}
+  }
 
-.youtube-viewer {
+  .youtube-viewer {
     margin: 1em 0;
-}
+  }
 
-
-#metadata-tab {
+  #metadata-tab {
+    display: block;
     height: 86%;
     overflow: scroll;
     clear: both;
 
-    label {
-        display: none;
-    }
-
     h3, dd, dt {
-        text-transform: none;
-        font-size: 16px;
+      text-transform: none;
+      font-size: 16px;
     }
-}
 
-#1-diva-grid-label {
-}
+    dl {
+      overflow: hidden;
+      margin: 0 0 1em 0;
+    }
 
-h3.has-video {
+    dd, dt {
+      margin: 0;
+    }
+
+    dd {
+      float: left;
+      width: 50%;
+    }
+
+    dt {
+      float: left;
+      width: 9%;
+      min-width: 3.5em;
+      clear: both;
+      margin-bottom: .5em;
+      font-weight: bold;
+    }
+
+    h3 {
+      font-weight: normal;
+      padding: .5em;
+      cursor: pointer;
+      text-decoration: none;
+      color: gray;
+      border: 1px solid gray;
+      margin: 0 0 .25em 0;
+    }
+
+    .metadata {
+      display: none;
+      padding: .5em;
+    }
+  }
+
+  #1-diva-grid-label {
+    display: none;
+  }
+
+  h3.has-video {
     background: url(../img/play.svg) no-repeat 98% center;
     background-size: auto 65%;
-}
+  }
 
-#info > section {
+  #info > section {
     display: none;
     padding-top: 1em;
     overflow: scroll;
     height: 86%;
-}
+  }
 
-#info > section.current-tab {
+  #info > section.current-tab {
     display: block;
-}
+  }
 
-#tab-menu ul {
+  #tab-menu ul {
     list-style: none inside none;
     margin: 0;
     padding: 0 0 0 4px;
-}
+  }
 
-#tab-menu li.current-tab {
+  #tab-menu li.current-tab {
     border-bottom: 4px solid #f3f4f5;
     color: #fff;
-}
+  }
 
-#tab-menu {
+  #tab-menu {
     clear: both;
     height: 40px;
     background-color: #94a4c3;
     color: #eee;
-}
+  }
 
-#search-tab {
+  #search-tab {
     clear: both;
-}
+  }
 
-#tab-menu li {
+  #tab-menu li {
     float: left;
     width: 45%;
     text-align: center;
@@ -181,114 +160,113 @@ h3.has-video {
     list-style: none inside none;
     padding: .5em;
     cursor: pointer;
-}
+  }
 
-.diva-grid-label, .diva-zoom-label {
+  .diva-grid-label, .diva-zoom-label {
     display: none;
     margin-left: 1em;
     line-height: 33px;
-}
+  }
 
-.entry-field .search-row {
+  .entry-field .search-row {
     display: none;
-}
+  }
 
-.entry-field .search-row.active-field {
+  .entry-field .search-row.active-field {
     display: inline-block;
-}
+  }
 
-.entry-field label {
+  .entry-field label {
     position: absolute;
     left: -10000px;
     top: auto;
     width: 1px;
     height: 1px;
     overflow: hidden;
-}
+  }
 
-
-.result-folio {
+  .result-folio {
     width: 7%;
-}
+  }
 
-td.result-incipit {
+  td.result-incipit {
     font-size: 1.2em;
     width: 45%;
-}
+  }
 
-#results-holder th {
+  #results-holder th {
     text-align: left;
     font-size: .9em
-}
+  }
 
-#results-holder th, #results-holder td {
+  #results-holder th, #results-holder td {
     padding: 0 1em 0 0;
-}
+  }
 
-#results-holder table {
+  #results-holder table {
     empty-cells: show;
-}
+  }
 
-#results-holder td.result-notation {
+  #results-holder td.result-notation {
     font-family: "Volpiano";
     padding-bottom: 1em;
     padding-top: .5em;
     font-size: 2em;
-}
+  }
 
-.select-index {
+  .select-index {
     display: inline-block;
-}
+  }
 
-.entry-field {
+  .entry-field {
     display: inline-block;
-}
+  }
 
-/* LOCAL CHANGES */
-tr.search-result {
+  /* LOCAL CHANGES */
+  tr.search-result {
     font-size: 14px;
     line-height: 1.4;
-}
+  }
 
-#info {
+  #info {
     background: white;
-}
+  }
 
-#results-holder h2 {
+  #results-holder h2 {
     margin-bottom: .5em;
-}
+  }
 
-span#results-total {
+  span#results-total {
     font-size: .8em;
-}
+  }
 
-#tab-menu li.current-tab {
-    font-weight:400;
-}
+  #tab-menu li.current-tab {
+    font-weight: 400;
+  }
 
-#results-holder td.result-notation {
-  padding-bottom: 1.5em;
-}
+  #results-holder td.result-notation {
+    padding-bottom: 1.5em;
+  }
 
-td.result-notation {
-  line-height: 2
-}
+  td.result-notation {
+    line-height: 2
+  }
 
-.diva-outer {
+  .diva-outer {
     border: none;
     background-color: $viewer-bg-color;
     height: 107%;
-}
+  }
 
-
-#diva-wrapper {
+  #diva-wrapper {
     height: 80vh;
-}
+  }
 
-#info {
+  #info {
     height: 93vh;
-}
+  }
 
-#viewer-body {
+  #viewer-body {
     background-color: $viewer-bg-color;
+  }
 }

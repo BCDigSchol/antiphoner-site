@@ -922,7 +922,7 @@ body.index #main {
 #footer {
   background: $footer-bg-color;
   color: $footer-text-color;
-  padding: 5em;
+  padding: 4em;
   text-align: center;
 
   .copyright {
@@ -937,7 +937,7 @@ body.index #main {
       display: inline-block;
       margin-left: 1em;
       padding-left: 1em;
-      border-left: dotted 1px;
+      border-left: none;
 
       &:first-child {
         margin: 0;

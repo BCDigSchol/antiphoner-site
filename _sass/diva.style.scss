@@ -13,13 +13,6 @@
     width: 50%;
   }
 
-  #info {
-    flex: 1;
-    padding: 0 2em;
-    font-weight: 300;
-    height: 90vh
-  }
-
   .diva-outer {
     height: 100%;
   }
@@ -44,10 +37,10 @@
 
   #search-tab {
     display: hidden;
-  }
 
-  #search-tab h3 {
-    font-weight: normal;
+    h3 {
+      font-weight: normal;
+    }
   }
 
   .youtube-viewer {
@@ -113,47 +106,37 @@
     background-size: auto 65%;
   }
 
-  #info > section {
-    display: none;
-    padding-top: 1em;
-    overflow: scroll;
-    height: 86%;
-  }
-
-  #info > section.current-tab {
-    display: block;
-  }
-
-  #tab-menu ul {
-    list-style: none inside none;
-    margin: 0;
-    padding: 0 0 0 4px;
-  }
-
-  #tab-menu li.current-tab {
-    border-bottom: 4px solid #f3f4f5;
-    color: #fff;
-  }
-
   #tab-menu {
     clear: both;
     height: 40px;
     background-color: #94a4c3;
     color: #eee;
+
+    ul {
+      list-style: none inside none;
+      margin: 0;
+      padding: 0 0 0 4px;
+    }
+
+    li.current-tab {
+      border-bottom: 4px solid #f3f4f5;
+      color: #fff;
+      font-weight: 400;
+    }
+
+    li {
+      float: left;
+      width: 45%;
+      text-align: center;
+      clear: none;
+      list-style: none inside none;
+      padding: .5em;
+      cursor: pointer;
+    }
   }
 
   #search-tab {
     clear: both;
-  }
-
-  #tab-menu li {
-    float: left;
-    width: 45%;
-    text-align: center;
-    clear: none;
-    list-style: none inside none;
-    padding: .5em;
-    cursor: pointer;
   }
 
   .diva-grid-label, .diva-zoom-label {
@@ -162,54 +145,62 @@
     line-height: 33px;
   }
 
-  .entry-field .search-row {
-    display: none;
-  }
+  .entry-field {
+    .search-row {
+      display: none;
 
-  .entry-field .search-row.active-field {
-    display: inline-block;
-  }
+      &.active-field {
+        display: inline-block;
+      }
+    }
 
-  .entry-field label {
-    position: absolute;
-    left: -10000px;
-    top: auto;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-  }
-
-  .result-folio {
-    width: 7%;
-  }
-
-  td.result-incipit {
-    font-size: 1.2em;
-    width: 45%;
+    label {
+      position: absolute;
+      left: -10000px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
   }
 
   #results-holder {
     clear: left;
-  }
 
-  #results-holder th {
-    text-align: left;
-    font-size: .9em
-  }
+    table {
+      empty-cells: show;
+    }
 
-  #results-holder th, #results-holder td {
-    padding: 0 1em 0 0;
-  }
+    th {
+      text-align: left;
+      font-size: .9em
+    }
 
-  #results-holder table {
-    empty-cells: show;
-  }
+    th, td {
+      padding: 0 1em 0 0;
+    }
 
-  #results-holder td.result-notation {
-    font-family: "Volpiano";
-    padding-bottom: 1em;
-    padding-top: .5em;
-    font-size: 2em;
+    td {
+      &.result-folio {
+        width: 7%;
+      }
+
+      &.result-notation {
+        font-family: "Volpiano";
+        font-size: 2em;
+        padding: .5em 0 1em 0;
+        line-height: 2
+      }
+
+      &.result-incipit {
+        font-size: 1.2em;
+        width: 45%;
+      }
+    }
+
+    h2 {
+      margin-bottom: .5em;
+    }
   }
 
   .select-index {
@@ -226,28 +217,8 @@
     line-height: 1.4;
   }
 
-  #info {
-    background: white;
-  }
-
-  #results-holder h2 {
-    margin-bottom: .5em;
-  }
-
   span#results-total {
     font-size: .8em;
-  }
-
-  #tab-menu li.current-tab {
-    font-weight: 400;
-  }
-
-  #results-holder td.result-notation {
-    padding-bottom: 1.5em;
-  }
-
-  td.result-notation {
-    line-height: 2
   }
 
   .diva-outer {
@@ -261,7 +232,11 @@
   }
 
   #info {
+    flex: 1;
+    padding: 0 2em;
+    font-weight: 300;
     height: 93vh;
+    background: white;
 
     /** Fade out bottom search results to hint scrolling. **/
     &:after {
@@ -275,6 +250,17 @@
               rgba(255, 255, 255, 1) 90%);
       width: 50%;
       height: 8em;
+    }
+
+    &> section {
+      display: none;
+      padding-top: 1em;
+      overflow: scroll;
+      height: 86%;
+    }
+
+    &> section.current-tab {
+      display: block;
     }
   }
 

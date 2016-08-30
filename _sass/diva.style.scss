@@ -42,12 +42,6 @@
     font-size: 26px;
   }
 
-  #volpiano-input {
-    font-size: 30px;
-    size: 600px;
-    font-family: "Volpiano";
-  }
-
   #search-tab {
     display: hidden;
   }
@@ -194,6 +188,10 @@
     width: 45%;
   }
 
+  #results-holder {
+    clear: left;
+  }
+
   #results-holder th {
     text-align: left;
     font-size: .9em
@@ -283,4 +281,47 @@
   #viewer-body {
     background-color: $viewer-bg-color;
   }
+
+  .select-index, .entry-field {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    float: left;
+  }
+
+  .select-index {
+    margin-right: 1em;
+    font-size: 16px;
+  }
+
+  .entry-field {
+    input#keyword-input {
+      font-size: 18px;
+    }
+
+    input {
+      width: 400px;
+      height: 36px;
+      padding: 0 .5em;
+    }
+  }
+
+  #volpiano-input {
+    font-size: 30px;
+    font-family: "Volpiano";
+  }
+
+}
+
+.select2-results {
+  font-size: 16px;
+}
+
+.entry-field .select2-selection {
+  width: 350px;
+}
+
+.select-index .select2-selection {
+  width: 100px;
 }

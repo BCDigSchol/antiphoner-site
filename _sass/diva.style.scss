@@ -401,3 +401,7 @@ $tab_menu_highlight_color: #fffaf2;
 .select-index .select2-selection {
   width: 100px;
 }
+
+#view-page .select2-container--default .select2-results>.select2-results__options {
+  max-height: 400px;
+}

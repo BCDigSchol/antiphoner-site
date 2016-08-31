@@ -28,6 +28,14 @@ figure img {
   display: block;
 }
 
+#footer ul.logos {
+  width: 100%;
+}
+
+#footer ul.logos li {
+  width: 33%;
+}
+
 #Table1 table, #Table2 table, #Table3 table, #Table4 table, #Table5 table {
 table-layout: fixed !important;
 }

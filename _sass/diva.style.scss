@@ -270,6 +270,10 @@ $tab_menu_highlight_color: #fffaf2;
       }
     }
 
+    td:first-child, th:first-child {
+      padding-left: 6px;
+    }
+
     td {
       &:first-child {
         width: 7%;
@@ -283,16 +287,20 @@ $tab_menu_highlight_color: #fffaf2;
       }
     }
 
+    .result-folio {
+      width: 7%;
+    }
+
     .result-incipit {
       width: 39%;
     }
 
     .result-mode {
-      width: 13.5%;
+      width: 8%;
     }
 
     .result-genre {
-      width: 13.5%;
+      width: 19%;
     }
 
     .result-feast {

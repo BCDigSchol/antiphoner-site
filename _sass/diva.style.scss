@@ -4,6 +4,10 @@
   src: url('../fonts/volpiano.ttf') format('truetype');
 }
 
+$viewer_default_font_size: 15px;
+$tab_menu_base_color: #94a4c3;
+$tab_menu_highlight_color: #fffaf2;
+
 #viewer-body {
   display: flex;
   margin-top: 3em;
@@ -11,7 +15,37 @@
   #diva-wrapper {
     height: 625px;
     width: 50%;
+
+    .diva-tools .diva-tools-right {
+      height: auto;
     }
+
+    .diva-zoom-label {
+      position: relative;
+      top: -3px;
+    }
+
+    .diva-tools .diva-tools-right .diva-page-nav .diva-page-label
+    {
+      padding: 0;
+    }
+
+    .diva-label {
+      font-size: 13px;
+    }
+
+    .diva-button {
+      width: 25px;
+      height: 25px;
+      background-size: 18px;
+      background-color: transparent;
+      border: none;
+    }
+
+    .diva-zoom-out-button, .diva-fullscreen-icon {
+      margin: 0 6px 0 3px;
+    }
+  }
 
   #diva-wrapper::-webkit-scrollbar {
     -webkit-appearance: none;
@@ -44,6 +78,7 @@
   .notation {
     font-family: 'Volpiano';
     font-size: 26px;
+    margin-bottom: 8px;
   }
 
   #search-tab {
@@ -96,7 +131,8 @@
       padding: .5em;
       cursor: pointer;
       text-decoration: none;
-      color: gray;
+      color: #313132;
+      background-color: #f1f0f1;
       border: 1px solid gray;
       margin: 0 0 .25em 0;
     }
@@ -118,8 +154,8 @@
 
   #tab-menu {
     clear: both;
-    height: 40px;
-    background-color: #94a4c3;
+    height: 50px;
+    background-color: $tab_menu_base_color;
     color: #eee;
 
     ul {
@@ -129,19 +165,30 @@
     }
 
     li.current-tab {
-      border-bottom: 4px solid #f3f4f5;
-      color: #fff;
+      border-bottom: 4px solid $tab_menu_highlight_color;
+      color: $tab_menu_highlight_color;
       font-weight: 400;
     }
 
     li {
-      float: left;
-      width: 45%;
+      width: 18%;
       text-align: center;
       clear: none;
       list-style: none inside none;
-      padding: .5em;
+      padding: 14px 0 6px 0;
       cursor: pointer;
+      font-size: 18px;
+      line-height: 18px;
+
+      &#metadata-tab-selector {
+        float: left;
+        margin-left: 24%
+      }
+
+      &#search-tab-selector {
+        float: right;
+        margin-right: 24%;
+      }
     }
   }
 
@@ -193,7 +240,6 @@
       -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
     }
 
-
     thead, tbody tr {
       display: table;
       width: 100%;
@@ -202,7 +248,7 @@
 
     th {
       text-align: left;
-      font-size: .7em;
+      font-size: 13px;
       font-weight: bold;
       padding: 0 1em 0 0;
     }
@@ -229,7 +275,6 @@
         width: 7%;
       }
 
-
       &.result-notation {
         font-family: "Volpiano";
         font-size: 1.4em;
@@ -238,27 +283,25 @@
       }
     }
 
-
     .result-incipit {
       width: 39%;
     }
 
-    .result-mode{
+    .result-mode {
       width: 13.5%;
     }
 
-    .result-genre{
+    .result-genre {
       width: 13.5%;
     }
 
-    .result-feast{
+    .result-feast {
       width: 13.5%;
     }
 
     .result-office {
       width: 13.5%;
     }
-
 
     h2 {
       margin-bottom: .5em;
@@ -275,12 +318,8 @@
 
   /* LOCAL CHANGES */
   tr.search-result {
-    font-size: 14px;
+    font-size: $viewer_default_font_size;
     line-height: 1.4;
-  }
-
-  span#results-total {
-    font-size: .8em;
   }
 
   .diva-outer {
@@ -292,27 +331,13 @@
   #info {
     flex: 1;
     padding: 0 2em;
-    font-weight: 300;
+    font-size: $viewer_default_font_size;
     height: 93vh;
     background: white;
 
-    /** Fade out bottom search results to hint scrolling.
-    &:after {
-      content: "";
-      position: absolute;
-      z-index: 1;
-      bottom: 0;
-      pointer-events: none;
-      background-image: linear-gradient(to bottom,
-              rgba(255, 255, 255, 0),
-              rgba(255, 255, 255, 1) 90%);
-      width: 50%;
-      height: 8em;
-    }**/
-
     & > section {
       display: none;
-      padding-top: 1em;
+      padding-top: 32px;
       overflow: scroll;
       height: 672px;
     }
@@ -332,7 +357,6 @@
     transform: translateY(-50%);
     display: block;
     float: left;
-    font-size: 16px;
   }
 
   .select-index {
@@ -359,7 +383,7 @@
 }
 
 .select2-results {
-  font-size: 16px;
+  font-size: $viewer_default_font_size;
 }
 
 .entry-field .select2-selection {

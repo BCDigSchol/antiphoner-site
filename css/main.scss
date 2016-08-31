@@ -29,11 +29,15 @@ figure img {
 }
 
 #footer ul.logos {
+
   width: 100%;
 }
 
 #footer ul.logos li {
   width: 33%;
+    display: inline-block;
+    line-height: 1em;
+    padding-left: 0.5em;
 }
 
 #Table1 table, #Table2 table, #Table3 table, #Table4 table, #Table5 table {

@@ -414,6 +414,7 @@ ul {
     list-style: disc;
     padding-left: 1em;
 
+
     li {
       padding-left: 0.5em;
     }
@@ -923,7 +924,7 @@ body.index #main {
   background: $footer-bg-color;
   color: $footer-text-color;
   padding: 4em;
-  text-align: center;
+  text-align: justify;
 
   .copyright {
     font-size: 0.8em;

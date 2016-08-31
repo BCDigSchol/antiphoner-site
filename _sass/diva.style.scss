@@ -11,6 +11,17 @@
   #diva-wrapper {
     height: 625px;
     width: 50%;
+    }
+
+  #diva-wrapper::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 6px;
+  }
+
+  #diva-wrapper::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
   }
 
   .diva-outer {
@@ -50,7 +61,6 @@
   #metadata-tab {
     display: block;
     height: 672px;
-    overflow: scroll;
     clear: both;
 
     h3, dd, dt {
@@ -172,33 +182,83 @@
       margin: 0;
     }
 
-    th {
-      text-align: left;
-      font-size: .8em;
-      font-weight:  bold;
+    tbody::-webkit-scrollbar {
+      -webkit-appearance: none;
+      width: 6px;
     }
 
-    th, td {
+    tbody::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      background-color: rgba(0, 0, 0, .5);
+      -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+    }
+
+
+    thead, tbody tr {
+      display: table;
+      width: 100%;
+      table-layout: fixed;
+    }
+
+    th {
+      text-align: left;
+      font-size: .7em;
+      font-weight: bold;
       padding: 0 1em 0 0;
     }
 
+    tr:nth-child(2n-1) td {
+      padding-top: 1em;
+    }
+
+    tbody {
+      display: block;
+      height: 571px;
+      overflow: scroll;
+
+      tr:nth-child(4n), tr:nth-child(4n-1) {
+        background-color: #fafaf8;
+      }
+      tr:nth-child(4n-2), tr:nth-child(4n-3) {
+        background: #f3f5f6;
+      }
+    }
+
     td {
-      &.result-folio {
+      &:first-child {
         width: 7%;
       }
 
+
       &.result-notation {
         font-family: "Volpiano";
-        font-size: 2em;
-        padding: .5em 0 1em 0;
+        font-size: 1.4em;
+        padding: 0 0 1em 0;
         line-height: 2
       }
-
-      &.result-incipit {
-        font-size: 1.2em;
-        width: 45%;
-      }
     }
+
+
+    .result-incipit {
+      width: 39%;
+    }
+
+    .result-mode{
+      width: 13.5%;
+    }
+
+    .result-genre{
+      width: 13.5%;
+    }
+
+    .result-feast{
+      width: 13.5%;
+    }
+
+    .result-office {
+      width: 13.5%;
+    }
+
 
     h2 {
       margin-bottom: .5em;
@@ -236,7 +296,7 @@
     height: 93vh;
     background: white;
 
-    /** Fade out bottom search results to hint scrolling. **/
+    /** Fade out bottom search results to hint scrolling.
     &:after {
       content: "";
       position: absolute;
@@ -248,16 +308,16 @@
               rgba(255, 255, 255, 1) 90%);
       width: 50%;
       height: 8em;
-    }
+    }**/
 
-    &> section {
+    & > section {
       display: none;
       padding-top: 1em;
       overflow: scroll;
       height: 672px;
     }
 
-    &> section.current-tab {
+    & > section.current-tab {
       display: block;
     }
   }
@@ -272,11 +332,11 @@
     transform: translateY(-50%);
     display: block;
     float: left;
+    font-size: 16px;
   }
 
   .select-index {
     margin-right: 1em;
-    font-size: 16px;
   }
 
   .entry-field {
@@ -308,14 +368,4 @@
 
 .select-index .select2-selection {
   width: 100px;
-}
-
-#viewer-body #info > section::-webkit-scrollbar {
-  -webkit-appearance: none;
-  width: 6px;
-}
-#viewer-body #info > section::-webkit-scrollbar-thumb {
-  border-radius: 4px;
-  background-color: rgba(0, 0, 0, .5);
-  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
 }

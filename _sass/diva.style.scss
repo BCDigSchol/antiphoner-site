@@ -477,4 +477,32 @@ $modal-delay-time: 150ms;
     font-size: 26px;
     margin-bottom: 8px;
   }
+
+  #diva-wrapper input[type="text"] {
+    display: inline-block;
+    position: relative;
+    top: -2px;
+    margin: 0 .5em;
+    font-size: 12px;
+    padding: 0;
+    line-height: 22px;
+    height: 22px;
+  }
+
+  input[type="submit"] {
+    height: 24px;
+    min-width: 30px;
+    line-height: 24px;
+    font-size: 12px;
+    padding: 0
+  }
+}
+
+#viewer-body #diva-wrapper .diva-fullscreen-icon {
+  position: relative;
+  top: 4px;
+}
+
+.diva-hide-scrollbar header#header {
+  display: none;
 }

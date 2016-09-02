@@ -28,6 +28,13 @@ figure img {
   display: block;
 }
 
+figure figcaption{
+  font-size: 80%;
+  padding: 1em 0 1em 2em;
+  text-align: justify;
+}
+
+
 #footer ul.logos {
 
   width: 100%;
@@ -46,7 +53,8 @@ table-layout: fixed !important;
 
 #Table1 table td, #Table2 table td, #Table3 table td, #Table4 table td, #Table5 table td {
 text-align: left;
-padding: 0 5px;
+/*padding: 0 5px;*/
+padding:0 1em 2em;
 }
 
 // Touch table style rules

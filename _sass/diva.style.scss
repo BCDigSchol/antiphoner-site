@@ -16,7 +16,7 @@ $input_length_med: 200px;
   margin-top: 3em;
 
   #diva-wrapper {
-    height: 625px;
+    height: 635px;
     width: 50%;
 
     .diva-tools .diva-tools-right {
@@ -328,7 +328,6 @@ $input_length_med: 200px;
   .diva-outer {
     border: none;
     background-color: $viewer-bg-color;
-    height: 107%;
   }
 
   #info {
@@ -342,7 +341,7 @@ $input_length_med: 200px;
       display: none;
       padding-top: 32px;
       overflow: scroll;
-      height: 672px;
+      height: 635px;
     }
 
     & > section.current-tab {
@@ -521,4 +520,26 @@ $modal-delay-time: 150ms;
 
 .diva-hide-scrollbar header#header {
   display: none;
+}
+
+
+@media screen and (max-width: $breakpoint-narrower)
+{
+  #view-page {
+    #viewer-body {
+      margin-top: 0;
+      flex-wrap: wrap;
+    }
+
+    #diva-wrapper {
+      width: 100%;
+      padding: 0 100px;
+      height: 600px;
+    }
+
+    #viewer-body #info {
+      margin-top: 5em;
+      height: auto;
+    }
+  }
 }

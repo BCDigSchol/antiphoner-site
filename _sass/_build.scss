@@ -160,7 +160,7 @@ header {
     margin-bottom: 5em;
     padding-top: 7em;
     position: relative;
-    text-align: center;
+    text-align: justify;
 
     &:before,
     &:after {
@@ -184,6 +184,7 @@ header {
 
     h2 {
       margin-bottom: 0;
+      text-align: center;
     }
 
     h2 + p {

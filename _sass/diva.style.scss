@@ -8,6 +8,9 @@ $viewer_default_font_size: 15px;
 $tab_menu_base_color: #94a4c3;
 $tab_menu_highlight_color: #fffaf2;
 
+$input_length_full: 300px;
+$input_length_med: 200px;
+
 #viewer-body {
   display: flex;
   margin-top: 3em;
@@ -73,8 +76,6 @@ $tab_menu_highlight_color: #fffaf2;
   li {
     clear: both;
   }
-
-
 
   #search-tab {
     display: hidden;
@@ -200,6 +201,7 @@ $tab_menu_highlight_color: #fffaf2;
   .entry-field {
     .search-row {
       display: none;
+      width: 100%;
 
       &.active-field {
         display: inline-block;
@@ -312,11 +314,9 @@ $tab_menu_highlight_color: #fffaf2;
   }
 
   .select-index {
-    display: inline-block;
-  }
-
-  .entry-field {
-    display: inline-block;
+    margin-right: 3%;
+    width: 22%;
+    min-width: 156px;
   }
 
   /* LOCAL CHANGES */
@@ -362,17 +362,15 @@ $tab_menu_highlight_color: #fffaf2;
     float: left;
   }
 
-  .select-index {
-    margin-right: 2em;
-  }
-
   .entry-field {
+    width: 50%;
+
     input#keyword-input {
       font-size: 18px;
     }
 
     input {
-      width: 400px;
+      width: 100%;
       height: 36px;
       padding: 0 .5em;
     }
@@ -385,12 +383,30 @@ $tab_menu_highlight_color: #fffaf2;
 
 }
 
+
+@media screen and (max-width: 980px) {
+  #viewer-body .entry-field {
+    width: 100%;
+    margin-top: 1em;
+  }
+}
+
 .select2-results {
   font-size: $viewer_default_font_size;
 }
 
-.entry-field .select2-selection {
-  width: 350px;
+
+
+@media screen and (min-width: 1081px) {
+  .entry-field .select2-selection {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .entry-field .select2-selection {
+    width: 200px;
+  }
 }
 
 .select-index .select2-selection {
@@ -413,7 +429,7 @@ $modal-delay-time: 150ms;
     border-radius: 9px;
     background-color: #77a177;
     color: #fff;
-    font-weight:bold;
+    font-weight: bold;
     line-height: 8px;
     padding: 4px;
   }

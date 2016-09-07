@@ -16,7 +16,7 @@ $input_length_med: 200px;
   margin-top: 3em;
 
   #diva-wrapper {
-    height: 635px;
+    height: 87.4vh;
     width: 50%;
 
     .diva-tools .diva-tools-right {
@@ -256,7 +256,7 @@ $input_length_med: 200px;
 
     tbody {
       display: block;
-      height: 571px;
+      height: 100%;
       overflow: scroll;
 
       tr:nth-child(4n), tr:nth-child(4n-1) {
@@ -341,7 +341,7 @@ $input_length_med: 200px;
       display: none;
       padding-top: 32px;
       overflow: scroll;
-      height: 635px;
+      height: 93%;
     }
 
     & > section.current-tab {

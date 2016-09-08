@@ -12,6 +12,7 @@ $input_length_full: 300px;
 $input_length_med: 200px;
 
 #viewer-body {
+  display: -webkit-flex;
   display: flex;
   margin-top: 3em;
 
@@ -332,6 +333,7 @@ $input_length_med: 200px;
 
   #info {
     flex: 1;
+    -webkit-flex: 1;
     padding: 0 2em;
     font-size: $viewer_default_font_size;
     height: 93vh;
@@ -529,6 +531,7 @@ $modal-delay-time: 150ms;
     #viewer-body {
       margin-top: 0;
       flex-wrap: wrap;
+      -webkit-flex-wrap: wrap;
     }
 
     #diva-wrapper {

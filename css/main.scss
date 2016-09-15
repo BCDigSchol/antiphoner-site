@@ -66,5 +66,9 @@ padding: 0 5px;
 
 a.unclickable {
   text-decoration: none;
-  border-bottom:none;
+  border-bottom: none;
+
+  &:hover {
+    cursor: default;
+  }
 }

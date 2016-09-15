@@ -27,7 +27,7 @@ $(document).ready(function () {
 
     function display_is_touchtable() {
         var isTouchDevice = 'ontouchstart' in document.documentElement;
-        return $(window).width() > 2200;
+        return ($(window).width() > 2200 && isTouchDevice);
     }
 
 });

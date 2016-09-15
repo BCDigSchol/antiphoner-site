@@ -63,3 +63,8 @@ padding: 0 5px;
   #footer {display: none}
   nav#nav li .button { display: none;}
 }
+
+a.unclickable {
+  text-decoration: none;
+  border-bottom:none;
+}

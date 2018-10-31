@@ -6,12 +6,12 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Site title
+title: Burns Antiphoner
 email: anna.kijas@bc.edu
 description: > # this means to ignore newlines until next config item, i.e. "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  The fourteenth-century Burns Antiphoner, held in the collections of Boston College’s John J.
+  Burns Library, is an illuminated manuscript antiphoner, a volume of monophonic chant originally
+  used for singing the divine office of the Roman Catholic church.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 

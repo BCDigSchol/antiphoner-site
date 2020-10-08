@@ -1,5 +1,35 @@
 Based on Twenty by [HTML5Up](html5up.net). This site is built with [Jekyll](https://jekyllrb.com/).
 
+## Getting started
+
+To the site and run it on a local server:
+
+1. Install [Jekyll](https://jekyllrb.com/docs/). 
+2. Clone this repository:
+
+   ```shell script
+   git clone https://github.com/BCDigSchol/antiphoner-site.git
+   ```
+3. Start the site:
+
+   ```shell script
+   cd antiphoner-site
+   jekyll serve
+   ```
+
+The site should now be available at https://localhost:4000.
+
+## Deploying
+
+Build a deployable version of the site with the jekyll `build` command:
+
+```shell script
+jekyll build
+```
+
+The deployable HTML and asset files will be in the *_site* directory. Upload this
+directory to the public site.
+
 ## Layouts
 
 The *_layouts* directory contains the layout templates Jekyll uses to build the site. There are two templates:
